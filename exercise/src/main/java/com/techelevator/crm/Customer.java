@@ -5,6 +5,7 @@ import com.techelevator.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Customer extends Person implements Billable {
     private String phoneNumber;
@@ -34,4 +35,12 @@ public class Customer extends Person implements Billable {
     public void setPets(List pets){
         this.pets = pets;
     }
+    public double getBalanceDue(Map<String, Double> customerFee){
+        double totalFee = 0.0;
+        for(Double cost: customerFee.values()){
+            totalFee += cost;
+        }
+        return totalFee;
+    }
+
 }
