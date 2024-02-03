@@ -9,8 +9,7 @@ import java.util.List;
 
 public class PetTests {
     //test if vaccinations list if it printed outcorrectly
-    @Before
-
+    
     @Test
     public void return_vaccination_list() {
         //arrange
